@@ -68,7 +68,7 @@ $(function () {
     timeline.to(".mil-animation-1 .mil-h3", {
         opacity: 0,
         y: '-30',
-    }, "+=.3");
+    }, "0");
 
     timeline.fromTo(".mil-reveal-box", 0.1, {
         opacity: 0,
