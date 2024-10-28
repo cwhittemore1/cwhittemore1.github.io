@@ -1,4 +1,13 @@
+/* -------------------------------------------
 
+Name: 		Ruizarch
+Version:    1.0
+Developer:	Nazar Miller (millerDigitalDesign)
+Portfolio:  https://themeforest.net/user/millerdigitaldesign/portfolio?ref=MillerDigitalDesign
+
+p.s. I am available for Freelance hire (UI design, web development). email: miller.themes@gmail.com
+
+------------------------------------------- */
 
 $(function () {
 
@@ -29,7 +38,7 @@ $(function () {
 
     ***************************/
 
-    var accent = 'rgba(6,189,208, 1)';
+    var accent = 'rgba(255, 152, 0, 1)';
     var dark = '#000';
     var light = '#fff';
 
@@ -41,12 +50,12 @@ $(function () {
 
     var timeline = gsap.timeline();
 
-    timeline.to(".mil-preloader-animation", 0.5, {
+    timeline.to(".mil-preloader-animation", {
         opacity: 1,
     });
 
     timeline.fromTo(
-        ".mil-animation-1 .mil-h3", 1, {
+        ".mil-animation-1 .mil-h3", {
             y: "30px",
             opacity: 0
         }, {
@@ -59,9 +68,9 @@ $(function () {
     timeline.to(".mil-animation-1 .mil-h3", 0.6, {
         opacity: 0,
         y: '-30',
-    });
+    }, "+=.3");
 
-    timeline.fromTo(".mil-reveal-box", 0, {
+    timeline.fromTo(".mil-reveal-box", 0.1, {
         opacity: 0,
     }, {
         opacity: 1,
@@ -72,14 +81,13 @@ $(function () {
         width: "100%",
         x: 0,
     }, "+=.1");
-    timeline.to(".mil-reveal-box", {
+    timeline.to(".mil-reveal-box", 0.3, {
         right: "0"
     });
     timeline.to(".mil-reveal-box", 0, {
         width: "0%"
     });
-
-    timeline.fromTo(".mil-animation-2 .mil-h3", 0,  {
+    timeline.fromTo(".mil-animation-2 .mil-h3", 0, {
         opacity: 0,
     }, {
         opacity: 1,
@@ -88,13 +96,11 @@ $(function () {
         opacity: 0,
         y: '-30'
     });
-
-    timeline.to(".mil-preloader", 0.3, {
+    timeline.to(".mil-preloader", 0.6, {
         opacity: 0,
         ease: 'sine',
     }, "+=.2");
-    
-    timeline.fromTo(".mil-up", 0.8, {
+    timeline.fromTo(".mil-up", 0, {
         opacity: 0,
         y: 40,
         scale: .98,
@@ -237,7 +243,7 @@ $(function () {
 
     function movecursor(e) {
         gsap.to(cursor, {
-            duration: 0.1,
+            duration: 0.6,
             ease: 'sine',
             x: e.clientX,
             y: e.clientY,
